@@ -28,14 +28,21 @@ class Game {
     }
 
     registerEvents() {
+        /*let curS = this.currentSymbol;
 
-        /*
-          TODO:
-          Написать обработчик события, который откликается
-          на каждый введённый символ.
-          В случае правильного ввода слова вызываем this.success()
-          При неправильном вводе символа - this.fail();
-         */
+          function keyUpCheck(){
+            let symbolInCurrent = curS.textContent.toLocaleLowerCase();
+            let symbolInput = String.fromCharCode(event.keyCode).toLocaleLowerCase();
+            if (symbolInCurrent === symbolInput) {
+              this.success();
+            } else {
+              this.fail();
+            }
+
+          document.addEventListener('keyup', keyUpCheck);
+          
+          }*/
+
     }
 
 
