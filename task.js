@@ -16,33 +16,19 @@ class Game {
         this.lossElement.textContent = 0;
     }
 
-    handleEvent(event) {
-        let curS = this.currentSymbol;
-        let symbolInCurrent = curS.textContent.toLocaleLowerCase();
-        let symbolInput = String.fromCharCode(event.keyCode).toLocaleLowerCase();
-        if (symbolInCurrent === symbolInput) {
-            this.success();
-        } else {
-            this.fail();
-        }
-    }
-
     registerEvents() {
-        /*let curS = this.currentSymbol;
+        let that = this;
 
-          function keyUpCheck(){
-            let symbolInCurrent = curS.textContent.toLocaleLowerCase();
+        function keyUpCheck(event) {
+            let symbolInCurrent = that.currentSymbol.textContent.toLocaleLowerCase();
             let symbolInput = String.fromCharCode(event.keyCode).toLocaleLowerCase();
             if (symbolInCurrent === symbolInput) {
-              this.success();
+                that.success();
             } else {
-              this.fail();
+                that.fail();
             }
-
-          document.addEventListener('keyup', keyUpCheck);
-          
-          }*/
-
+        }
+        document.addEventListener('keyup', keyUpCheck);
     }
 
 
